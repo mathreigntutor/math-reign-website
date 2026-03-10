@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Math Reign | Elite Math Tutoring</title>
+<title>Math Reign Tutoring</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -40,19 +41,13 @@ gap:15px;
 }
 
 .logo{
-width:90px;
+width:80px;
 }
 
 .site-title{
-font-size:28px;
+font-size:30px;
 font-weight:600;
 }
-
-.tagline{
-font-size:15px;
-}
-
-/* HERO */
 
 .hero{
 text-align:center;
@@ -69,14 +64,14 @@ font-size:18px;
 }
 
 .btn{
+display:inline-block;
 margin-top:20px;
 background:#ff5a5f;
 padding:14px 28px;
-border:none;
 border-radius:6px;
 color:white;
+text-decoration:none;
 font-size:18px;
-cursor:pointer;
 }
 
 /* SECTIONS */
@@ -91,6 +86,8 @@ font-size:32px;
 margin-bottom:40px;
 }
 
+/* GRID */
+
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -104,40 +101,37 @@ border-radius:10px;
 box-shadow:0 6px 20px rgba(0,0,0,0.08);
 }
 
-/* HIGHLIGHT */
+/* FORM */
 
-.highlight{
-background:#ffd34d;
-padding:25px;
-text-align:center;
-border-radius:8px;
-font-size:20px;
-font-weight:600;
+form{
+max-width:500px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+form input, form select, form textarea{
+padding:12px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+form button{
+background:#ff5a5f;
+color:white;
+padding:14px;
+border:none;
+border-radius:6px;
+font-size:16px;
+cursor:pointer;
 }
 
 /* CONTACT */
 
 .contact{
 text-align:center;
-}
-
-.contact p{
 font-size:18px;
-margin:10px 0;
-}
-
-/* WHATSAPP */
-
-.whatsapp{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#25D366;
-color:white;
-padding:14px 20px;
-border-radius:50px;
-text-decoration:none;
-font-weight:600;
 }
 
 /* FOOTER */
@@ -161,20 +155,19 @@ padding:20px;
 
 <img src="logo.png" class="logo" alt="Math Reign Logo">
 
-<div>
 <div class="site-title">Math Reign</div>
-<div class="tagline">Elite Math Tutoring</div>
-</div>
 
 </div>
 
 <div class="hero">
 
-<h2>Math Tutoring for Grades 9 & 10</h2>
+<h2>Elite Math Tutoring</h2>
 
-<p>Offline tutoring in Tokyo | Online tutoring worldwide</p>
+<p>Grades 9 & 10 | Small batch (1-4 students)</p>
 
-<button class="btn">Enroll Now</button>
+<p>Offline tutoring in Tokyo | Online worldwide</p>
+
+<a href="#enroll" class="btn">Enroll Now</a>
 
 </div>
 
@@ -188,22 +181,22 @@ padding:20px;
 
 <div class="card">
 <h3>15+ Years Teaching Experience</h3>
-<p>Extensive experience teaching mathematics and preparing students for board exams.</p>
+<p>Experienced mathematics tutor helping students excel in board exams.</p>
 </div>
 
 <div class="card">
-<h3>Small Batch Learning</h3>
-<p>Only 1–4 students per batch ensuring personalized attention.</p>
+<h3>Small Batch Classes</h3>
+<p>Only 1–4 students per class ensuring personalized attention.</p>
 </div>
 
 <div class="card">
 <h3>CBSE Curriculum</h3>
-<p>Focused teaching aligned with NCERT syllabus.</p>
+<p>Based on NCERT textbooks and exemplar problems.</p>
 </div>
 
 <div class="card">
 <h3>Board Exam Preparation</h3>
-<p>Special preparation strategies for Class 10 board exams.</p>
+<p>Special strategies and test series for Grade 10 boards.</p>
 </div>
 
 </div>
@@ -217,44 +210,68 @@ padding:20px;
 <div class="grid">
 
 <div class="card">
-<h3>Class 9 Math Program</h3>
-<p>✔ CBSE NCERT curriculum</p>
+<h3>Grade 9 Mathematics</h3>
+<p>✔ Algebra</p>
+<p>✔ Geometry</p>
+<p>✔ Statistics</p>
 <p>✔ Weekly practice tests</p>
-<p>✔ Algebra, Geometry, Statistics</p>
 </div>
 
 <div class="card">
-<h3>Class 10 Math Program</h3>
+<h3>Grade 10 Mathematics</h3>
 <p>✔ Board exam preparation</p>
-<p>✔ NCERT & Exemplar problems</p>
-<p>✔ Mock tests & revision</p>
+<p>✔ NCERT & Exemplar practice</p>
+<p>✔ Mock tests</p>
 </div>
 
 </div>
 
 </section>
 
-<section>
+<section id="enroll">
 
-<div class="highlight">
-Schedule: Monday – Saturday
-<br><br>
-Batch Size: 1 – 4 Students
-</div>
+<h2 class="section-title">Enroll Now</h2>
+
+<form id="enrollForm">
+
+<input type="text" name="studentName" placeholder="Student Name" required>
+
+<select name="grade" required>
+<option value="">Select Grade</option>
+<option>Grade 9</option>
+<option>Grade 10</option>
+</select>
+
+<input type="date" name="date" required>
+
+<input type="text" name="time" placeholder="Preferred Time for Class" required>
+
+<textarea name="topics" placeholder="Topics needing help"></textarea>
+
+<select name="mode">
+<option>In Person</option>
+<option>Online</option>
+</select>
+
+<input type="tel" name="phone" placeholder="Phone Number" required>
+
+<input type="email" name="email" placeholder="Email Address" required>
+
+<button type="submit">Submit Enrollment</button>
+
+</form>
+
+<p id="msg" style="text-align:center;margin-top:20px;"></p>
 
 </section>
 
 <section class="contact">
 
-<h2 class="section-title">Contact & Enrollment</h2>
+<h2 class="section-title">Contact</h2>
 
-<p>📞 Phone / WhatsApp: +91 9538904850</p>
+<p>Phone / WhatsApp: +91 9538904850</p>
 
-<p>📧 Email: mathreigntutor@gmail.com</p>
-
-<p>📍 Offline tutoring in Tokyo</p>
-
-<p>💻 Online tutoring worldwide</p>
+<p>Email: mathreigntutor@gmail.com</p>
 
 </section>
 
@@ -264,7 +281,30 @@ Batch Size: 1 – 4 Students
 
 </footer>
 
-<a class="whatsapp" href="https://wa.me/919538904850">Chat on WhatsApp</a>
+<script>
+
+const scriptURL = "YOUR_SCRIPT_URL"
+
+const form = document.getElementById("enrollForm")
+
+form.addEventListener("submit", e => {
+
+e.preventDefault()
+
+fetch(scriptURL, {
+method: "POST",
+body: new FormData(form)
+})
+.then(response => {
+document.getElementById("msg").innerHTML =
+"Enrollment submitted successfully!"
+form.reset()
+})
+.catch(error => console.error("Error!", error.message))
+
+})
+
+</script>
 
 </body>
 </html>
