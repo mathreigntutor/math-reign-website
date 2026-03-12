@@ -32,8 +32,6 @@ color:white;
 padding:20px 10%;
 }
 
-/* NAVBAR */
-
 .navbar{
 display:flex;
 align-items:center;
@@ -45,9 +43,11 @@ width:80px;
 }
 
 .site-title{
-font-size:30px;
+font-size:28px;
 font-weight:600;
 }
+
+/* HERO */
 
 .hero{
 text-align:center;
@@ -101,32 +101,6 @@ border-radius:10px;
 box-shadow:0 6px 20px rgba(0,0,0,0.08);
 }
 
-/* FORM */
-
-form{
-max-width:500px;
-margin:auto;
-display:flex;
-flex-direction:column;
-gap:15px;
-}
-
-form input, form select, form textarea{
-padding:12px;
-border-radius:6px;
-border:1px solid #ccc;
-}
-
-form button{
-background:#ff5a5f;
-color:white;
-padding:14px;
-border:none;
-border-radius:6px;
-font-size:16px;
-cursor:pointer;
-}
-
 /* CONTACT */
 
 .contact{
@@ -163,9 +137,9 @@ padding:20px;
 
 <h2>Elite Math Tutoring</h2>
 
-<p>Grades 9 & 10 | Small batch (1-4 students)</p>
+<p>Grades 9 & 10 | Small Batch (1–4 Students)</p>
 
-<p>Offline tutoring in Tokyo | Online worldwide</p>
+<p>Offline tutoring in Tokyo | Online tutoring worldwide</p>
 
 <a href="#enroll" class="btn">Enroll Now</a>
 
@@ -181,22 +155,22 @@ padding:20px;
 
 <div class="card">
 <h3>15+ Years Teaching Experience</h3>
-<p>Experienced mathematics tutor helping students excel in board exams.</p>
+<p>Experienced math tutor helping students succeed in board exams.</p>
 </div>
 
 <div class="card">
 <h3>Small Batch Classes</h3>
-<p>Only 1–4 students per class ensuring personalized attention.</p>
+<p>Only 1–4 students per class for personalized attention.</p>
 </div>
 
 <div class="card">
 <h3>CBSE Curriculum</h3>
-<p>Based on NCERT textbooks and exemplar problems.</p>
+<p>Based on NCERT textbooks and exemplar practice.</p>
 </div>
 
 <div class="card">
 <h3>Board Exam Preparation</h3>
-<p>Special strategies and test series for Grade 10 boards.</p>
+<p>Special strategies and mock tests for Grade 10 boards.</p>
 </div>
 
 </div>
@@ -214,14 +188,14 @@ padding:20px;
 <p>✔ Algebra</p>
 <p>✔ Geometry</p>
 <p>✔ Statistics</p>
-<p>✔ Weekly practice tests</p>
+<p>✔ Weekly tests</p>
 </div>
 
 <div class="card">
 <h3>Grade 10 Mathematics</h3>
 <p>✔ Board exam preparation</p>
 <p>✔ NCERT & Exemplar practice</p>
-<p>✔ Mock tests</p>
+<p>✔ Mock exams</p>
 </div>
 
 </div>
@@ -232,36 +206,13 @@ padding:20px;
 
 <h2 class="section-title">Enroll Now</h2>
 
-<form id="enrollForm">
-
-<input type="text" name="studentName" placeholder="Student Name" required>
-
-<select name="grade" required>
-<option value="">Select Grade</option>
-<option>Grade 9</option>
-<option>Grade 10</option>
-</select>
-
-<input type="date" name="date" required>
-
-<input type="text" name="time" placeholder="Preferred Time for Class" required>
-
-<textarea name="topics" placeholder="Topics needing help"></textarea>
-
-<select name="mode">
-<option>In Person</option>
-<option>Online</option>
-</select>
-
-<input type="tel" name="phone" placeholder="Phone Number" required>
-
-<input type="email" name="email" placeholder="Email Address" required>
-
-<button type="submit">Submit Enrollment</button>
-
-</form>
-
-<p id="msg" style="text-align:center;margin-top:20px;"></p>
+<iframe
+src="YOUR_GOOGLE_FORM_LINK"
+width="100%"
+height="900"
+frameborder="0">
+Loading…
+</iframe>
 
 </section>
 
@@ -281,31 +232,5 @@ padding:20px;
 
 </footer>
 
-<script>
-
-const scriptURL = "https://script.google.com/macros/s/AKfycbwwL4kcyBEncu83JYDUdvK_X4-B8sgpSTZjL_XoghIfvf8OXQpppmwEgGiVtQRD8TQ/exec"
-
-const form = document.getElementById("enrollForm")
-
-form.addEventListener("submit", e => {
-
-e.preventDefault()
-
-fetch(scriptURL, {
-method: "POST",
-body: new FormData(form)
-})
-.then(response => {
-document.getElementById("msg").innerHTML =
-"Enrollment submitted successfully!"
-form.reset()
-})
-.catch(error => console.error("Error!", error.message))
-
-})
-
-</script>
-
 </body>
 </html>
-
